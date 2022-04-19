@@ -20,9 +20,9 @@ def leiaInt(numero):
 
 
 def hea(txt, tam=42):
-    print(line(tam))
+    line(tam)
     print(txt.center(42))
-    print(line(tam))
+    line(tam)
 
 def menu(lista):
     hea('MENU PRINCIPAL')
@@ -30,7 +30,7 @@ def menu(lista):
     for item in lista:
         print(f'{c} - {item}')
         c+=1
-    print(line())
+    line()
     opc= leiaInt('Sua opção: ')
     return opc
 

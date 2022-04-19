@@ -9,11 +9,20 @@ func.line(42)
 while True:
     try:
         func.line(50)
-        choice1= str(input("\nYou are in a dark dungeon and there is only a bridge and a door, the bridge is old and on the other side of the door there are strange sounds, do you want to enter the 'door' or go through the 'bridge'?")).lower()
+        while True:
+            choice1= str(input("\nYou are in a dark dungeon and there is only a bridge and a door, the bridge is old and on the other side of the door there are strange sounds, do you want to enter the 'door' or go through the 'bridge'? ")).lower()
+            if choice1 =='door' or choice1=='bridge':
+                break
+            else:
+                print('ERROR! TYPE A VALID OPTION!')
         if choice1=='door':
             func.line(50)
-            choice2=str(input("\nYou opened the door and found a weak and sick griffin, do you want to help him? 'yes' or 'no':")).lower()
-            sleep(2)
+            while True:
+                choice2=str(input("\nYou opened the door and found a weak and sick griffin, do you want to help him? 'yes' or 'no': ")).lower()
+                if choice2=='yes' or choice2=='no':
+                    break
+                else:
+                    print('ERROR! TYPE A VALID OPTION!')
             if choice2=='yes':
                 func.line(50)
                 print('The griffon needs to know you first, say your name and class...')
@@ -31,7 +40,13 @@ while True:
                 print("The griffin is walking beside you, he wants to follow you, maybe it's his survival instincts.")
                 sleep(4)
                 func.line(50)
-                choice3= str(input("\nDo you accept having the griffin as your partner? 'yes' or 'no':")).lower()
+                while True:
+                    choice3= str(input("\nDo you accept having the griffin as your partner? 'yes' or 'no':")).lower()
+                    if choice3=='yes' or choice3=='no':
+                        break
+                    else:
+                        print('ERROR! TYPE A VALID OPTION!')
+
                 if choice3== 'yes':
                     print("Great, the griffin unexpectedly flies you out of the dungeon, maybe that was the only way out, go to LEVEL2!")
                     break
@@ -60,7 +75,12 @@ while True:
                 break
         else:
             func.line(50)
-            choice2= str(input("You crossed the bridge safely, arrived outside the dungeon and found an elder almost dead, do you wish to help him? 'yes' or 'no':")).lower()
+            while True:
+                choice2= str(input("You crossed the bridge safely, arrived outside the dungeon and found an elder almost dead, do you wish to help him? 'yes' or 'no':")).lower()
+                if choice2=='yes' or choice2=='no':
+                    break
+                else:
+                    print('ERROR! TYPE A VALID OPTION!')
             if choice2=='yes':
                 func.line(50)
                 print("You gave the healing potion that was in your backpack to the elder, the potion has a better effect on humans, healing all of the elder's wounds.")
