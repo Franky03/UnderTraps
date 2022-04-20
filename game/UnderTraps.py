@@ -76,7 +76,7 @@ while True:
         else:
             func.line(50)
             while True:
-                choice2= str(input("You crossed the bridge safely, arrived outside the dungeon and found an elder almost dead, do you wish to help him? 'yes' or 'no':")).lower()
+                choice2= str(input("You crossed the bridge safely, arrived outside the dungeon and found an elder almost dead, do you wish to help him? 'yes' or 'no': ")).lower()
                 if choice2=='yes' or choice2=='no':
                     break
                 else:
@@ -98,7 +98,7 @@ while True:
                     print("You notice that the elder carries a staff with a jewel, but at the moment this does not pique your interest.")
                     sleep(4)
                     print('There in front is the gate to exit the dungeon, go to LEVEL2!')
-                    func.conq(txt, 'The elder owes you a favor')
+                    print('The elder owes you a favor')
                     break
                 else:
                     print(f"Elder: you're from {quest1}, i've heard many stories there, i prefer not to get involved with people of your class, thanks for the potion... what's your name?")
@@ -112,7 +112,7 @@ while True:
                     print(f"From now on, I'll take care of myself, {name}.")
                     sleep(2)
                     print('There in front is the gate to exit the dungeon, go to LEVEL2!')
-                    func.conq(txt, 'The elder hates you for your class')
+                    print('The elder hates you for your class')
                     break
             else:
                 func.line(50)
