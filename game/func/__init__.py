@@ -1,3 +1,5 @@
+from time import sleep
+
 def line(tam=60):
     print('--'*tam)
 def leiaInt(numero):
@@ -93,3 +95,8 @@ def conq(nome, conquest):
         else:
             print('New conquest added!')
             a.close()
+
+def points(n=3):
+    for c in range(0,n):
+        print('.', end='',flush=True)
+        sleep(1)
